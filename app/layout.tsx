@@ -27,6 +27,30 @@ export default function RootLayout({
             * {
               box-sizing: border-box;
             }
+            
+            @keyframes pulse {
+              0% { transform: scale(0.95); opacity: 0.7; }
+              50% { transform: scale(1); opacity: 1; }
+              100% { transform: scale(0.95); opacity: 0.7; }
+            }
+            
+            @keyframes float {
+              0% { transform: translateY(0px); }
+              50% { transform: translateY(-10px); }
+              100% { transform: translateY(0px); }
+            }
+            
+            .cat-emoji {
+              animation: float 3s ease-in-out infinite;
+            }
+            
+            .loading-text {
+              animation: pulse 1.5s infinite;
+            }
+            
+            .button-hover-effect:hover {
+              opacity: 1;
+            }
           `,
           }}
         />
